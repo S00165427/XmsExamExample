@@ -177,6 +177,10 @@
     <Compile Include="Migrations\ApplicationUsersMigrations\201808161522503_application user migration.Designer.cs">
       <DependentUpon>201808161522503_application user migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationUsersMigrations\201808161606433_test user.cs" />
+    <Compile Include="Migrations\ApplicationUsersMigrations\201808161606433_test user.Designer.cs">
+      <DependentUpon>201808161606433_test user.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ApplicationUsersMigrations\Configuration.cs" />
     <Compile Include="Migrations\LibraryMigrations\201808161529016_initial migrations.cs" />
     <Compile Include="Migrations\LibraryMigrations\201808161529016_initial migrations.Designer.cs">
@@ -267,6 +271,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\ApplicationUsersMigrations\201808161522503_application user migration.resx">
       <DependentUpon>201808161522503_application user migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationUsersMigrations\201808161606433_test user.resx">
+      <DependentUpon>201808161606433_test user.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\LibraryMigrations\201808161529016_initial migrations.resx">
       <DependentUpon>201808161529016_initial migrations.cs</DependentUpon>
