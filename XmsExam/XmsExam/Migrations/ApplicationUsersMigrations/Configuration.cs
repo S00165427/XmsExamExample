@@ -55,13 +55,13 @@ namespace XmsExam.Migrations.ApplicationUsersMigrations
             ApplicationUser Librarian = manager.FindByEmail("einstein.albert@itsligo.ie");
             if (Librarian != null)
             {
-                manager.AddToRoles(Librarian.Id, new string[] { "Librarian", "Member" });
+                manager.AddToRoles(Librarian.Id, new string[] { "Librarian" });
             }
             //member role
             ApplicationUser Member = manager.FindByEmail("blogs.joe@itsligo.ie");
             if (Member != null)
             {
-                manager.AddToRoles(Member.Id, new string[] { "Librarian", "Member" });
+                manager.AddToRoles(Member.Id, new string[] {"Member" });
             }
 
 
