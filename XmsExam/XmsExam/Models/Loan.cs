@@ -20,6 +20,7 @@ namespace XmsExam.Models
 
         [ForeignKey("associatedBook")]
         public int BookId { get; set; }
+        public DateTime DateJoined { get; set; }
 
         public virtual Member associatedMember { get; set; }
         public virtual Book associatedBook { get; set; }

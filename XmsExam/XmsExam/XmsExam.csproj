@@ -182,6 +182,10 @@
     <Compile Include="Migrations\LibraryMigrations\201808161529016_initial migrations.Designer.cs">
       <DependentUpon>201808161529016_initial migrations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\LibraryMigrations\201808161545517_Loan Date Added.cs" />
+    <Compile Include="Migrations\LibraryMigrations\201808161545517_Loan Date Added.Designer.cs">
+      <DependentUpon>201808161545517_Loan Date Added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\LibraryMigrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Book.cs" />
@@ -266,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\LibraryMigrations\201808161529016_initial migrations.resx">
       <DependentUpon>201808161529016_initial migrations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\LibraryMigrations\201808161545517_Loan Date Added.resx">
+      <DependentUpon>201808161545517_Loan Date Added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
