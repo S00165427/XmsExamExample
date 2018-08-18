@@ -191,9 +191,15 @@
     <Compile Include="Migrations\LibraryMigrations\201808161545517_Loan Date Added.Designer.cs">
       <DependentUpon>201808161545517_Loan Date Added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\LibraryMigrations\201808181334317_CourseTable.cs" />
+    <Compile Include="Migrations\LibraryMigrations\201808181334317_CourseTable.Designer.cs">
+      <DependentUpon>201808181334317_CourseTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\LibraryMigrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\CourseDataImport.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LibraryContext.cs" />
     <Compile Include="Models\Loan.cs" />
@@ -211,6 +217,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EmbeddedResource Include="Migrations\Courses.csv" />
+    <EmbeddedResource Include="Migrations\LibraryMigrations\201808181334317_CourseTable.resx">
+      <DependentUpon>201808181334317_CourseTable.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

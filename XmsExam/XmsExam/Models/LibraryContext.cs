@@ -16,6 +16,8 @@ namespace XmsExam.Models
         public DbSet<Member> Members { get; set; }
         public DbSet<Loan> Loans { get; set; }
         public DbSet<Book> books { get; set; }
+
+        public DbSet<Course> Courses { get; set; }
     }
 
 }

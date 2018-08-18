@@ -110,5 +110,9 @@ namespace XmsExam.Migrations.LibraryMigrations
             #endregion
             context.SaveChanges(); // NOTE EF will update the relevant foreign key fields in the clubs, club events and member tables based on the attributes
         }
+
+
+
+
     }
 }
