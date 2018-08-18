@@ -4,10 +4,15 @@ namespace XmsExam.Migrations.LibraryMigrations
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.IO;
     using System.Linq;
+    using System.Reflection;
+    using System.Text;
 
     internal sealed class Configuration : DbMigrationsConfiguration<XmsExam.Models.LibraryContext>
     {
+        private object selectedStudents;
+
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
@@ -18,6 +23,7 @@ namespace XmsExam.Migrations.LibraryMigrations
         {
             seedMember(context);
             seedBooks(context);
+            seedCourses(context);
         }
 
 
@@ -53,9 +59,9 @@ namespace XmsExam.Migrations.LibraryMigrations
                            SecondName = "bbbbb",
                            DateJoined = DateTime.Now,
                            MemberId = 2,
-                            //Member = SeedMembers(context),
-                            //      memberLoan = new List<Loan>()
-                        });
+                           //Member = SeedMembers(context),
+                           //      memberLoan = new List<Loan>()
+                       });
             #endregion
             context.SaveChanges(); // NOTE EF will update the relevant foreign key fields in the clubs, club events and member tables based on the attributes
         }
@@ -112,7 +118,33 @@ namespace XmsExam.Migrations.LibraryMigrations
         }
 
 
+        private void seedCourses(LibraryContext context)
+        {
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            string resourceName = "XmsExam.Migrations.Courses.csv";
+
+            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+            using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
+               
+            //{
+            //    CsvReader csvReader = new CsvReader(reader);
+            //    csvReader.Configuration.HasHeaderRecord = false;
+            //    var courseData = csvReader.GetRecords<CourseDataImport>().ToArray();
+            //    foreach (var dataItem in courseData)
+            //    {
+            //        context.Courses.AddOrUpdate(c =>
+            //                new { c.CourseCode, c.CourseName },
+            //                new Course
+            //                {
+            //                    CourseCode = dataItem.CourseCode,
+            //                    CourseName = dataItem.CourseName,
+            //                    CourseYear = dataItem.Year
+            //                });
+            //    }
+                context.SaveChanges();
+            }
 
 
+        }
     }
 }
